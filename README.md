@@ -6,8 +6,10 @@ First install the Netlify CLI globally (if you haven't already):
 npm install -g netlify-cli
 ```
 
-Next, `cd` into the your clone of the repo and install dependencies:
+Next, clone the repo and install dependencies:
 ```
+git clone https://github.com/OlyJS/olyjs.git
+cd olyjs
 npm install
 ```
 
