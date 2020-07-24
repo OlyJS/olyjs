@@ -3,7 +3,7 @@
     <h1 class="mb-6 text-2xl text-gray-900 font-thin">Upcoming Events</h1>
     <fa-icon v-if="!events" icon="spinner" spin class="text-5xl text-gray-400 mt-4" />
     <!-- LIST -->
-    <ul class="font-sans list-none p-0 container m-auto text-gray-900">
+    <ul v-if="events" class="font-sans list-none p-0 container m-auto text-gray-900">
       <li
         :key="event.id"
         v-for="event in events"
@@ -31,6 +31,9 @@
         <label for="status" class="font-bold w-1/5 text-right">Active</label>
       </li>
     </ul>
+    <div v-if="events.length === 0" class="text-gray-600 italic">
+        No events
+    </div>
   </div>
 </template>
 
